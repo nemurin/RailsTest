@@ -16,10 +16,6 @@ class PeopleController < ApplicationController
       Person.create(person_params)
       end
       redirect_to '/people'
-    end
-  private
-  def person_params
-    params.require(:person).permit(:name,:age,:mail)
   end
   def edit
     @msg="edit data.[id="+params[:id]+"]"
@@ -34,5 +30,9 @@ class PeopleController < ApplicationController
     obj=Person.find(params[:id])
     obj.destroy
     redirect_to 'people'
+  end
+  private
+  def person_params
+    params.require(:person).permit(:name,:age,:mail)
   end
 end
