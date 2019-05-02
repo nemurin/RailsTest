@@ -32,6 +32,14 @@ class PeopleController < ApplicationController
     obj.destroy
     redirect_to 'people'
   end
+  def find
+    @msg='please type search word...'
+    @people=Array.new
+    if request.post? then
+      obj=Person.find params['find']
+      @people.push obj
+    end
+  end
   private
   def person_params
     params.require(:person).permit(:name,:age,:mail)
