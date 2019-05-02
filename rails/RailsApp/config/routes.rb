@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'messages/index'
+  get 'messages/show'
+  get 'messages/add'
+  get 'messages/edit'
   get 'people/find'
   post 'people/find'
 
