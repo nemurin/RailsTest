@@ -18,6 +18,8 @@ class PeopleController < ApplicationController
       redirect_to '/people'
     else
       @msg='入力に問題があります'
+      render 'add'
+    end
   end
   def edit
     @msg="edit data.[id="+params[:id]+"]"
