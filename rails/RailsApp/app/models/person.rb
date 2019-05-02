@@ -1,4 +1,4 @@
 class Person < ApplicationRecord
-    validates :name, presense: true
+    validates :name, presence: true
     validates :age, numericality: true
 end
