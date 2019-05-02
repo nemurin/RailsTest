@@ -37,7 +37,7 @@ class PeopleController < ApplicationController
     @people=Array.new
     if request.post? then
       f= params[:find].split(',')
-      @people = Person.find(f)
+      @people = Person.where('name like ?','%' + params[:find] + '%').order 'age asc'
     end
   end
   private
