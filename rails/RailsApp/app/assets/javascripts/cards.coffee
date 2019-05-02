@@ -2,6 +2,6 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 window.delData=(id,title)->
-if confirm('['+title+']のデータを削除しますか？')
+if confirm('「'+ title +'」のデータを削除しますか？')
 document.location="/cards/delete/"+id;
 return false;

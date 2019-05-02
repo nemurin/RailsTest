@@ -9,8 +9,7 @@
 <td width="35px"><%= obj.id %></td>
 <td width="50%"><a href="/cards/<%= obj.id %>"><%= obj.title%></a></td>
 <td><%=obj.author%></td>
-<td width="40px"><a href="/cards/edit/<%= obj.id%>">編集</a></td>
-<td width="40px"><a href="javascript:window.delData(<%=(obj.id.to_s + ",'".to_s +obj.title.to_s).html_safe %>');">削除</a></td>
+<td width="40px"><a href="/cards/edit/<%= obj.id　%>">編集</a></td>
 </tr>
 <% end %>
 </table>
