@@ -1,2 +1,16 @@
 <h1>Messages#edit</h1>
-<p>Find me in app/views/messages/edit.html.erb</p>
+<p><%= @msg %></p>
+<table>
+<%= form_for(@message,url:{controller:'messages',action:'update',id:@message.id}) do |form| %>
+<tr><th>Person_id</th>
+<td><%= form.text_field :person_id %></td></tr>
+<tr><th>Title</th>
+<td><%= form.text_field :title %></td></tr>
+<tr><th>Message</th>
+<td><%= form.text_field :message,{cols:30,rows:3} %></td></tr>
+</tr>
+<tr><th></th>
+<td><%= form.submit "送信" %></td></tr>
+</tr>
+<%end%>
+</table>
