@@ -3,9 +3,15 @@ Rails.application.routes.draw do
   get 'messages/show'
   get 'messages/add'
   get 'messages/edit'
+  get 'messages',to:'messages#index'
+  post 'messages/add',to:'messages#create'
+  get 'messages/edit:id',to:'messages#edit'
+  patch 'messages/edit/:id',to:'messages#update'
+  get 'messages/delete/:id',to:'messages#delete'
+  get 'messages/:id',to:'messages#show'
+
   get 'people/find'
   post 'people/find'
-
   get 'cards/index'
   get 'cards',to:'cards#index'
   get 'cards/add'
