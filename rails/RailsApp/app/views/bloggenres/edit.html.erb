@@ -1,5 +1,5 @@
 <h1>Bloggenres#edit</h1>
-<p>※ジャンル・データの作成</p>
+<p>※ジャンルの編集</p>
 <% if @bloggenre.errors.any? %>
 <ul>
 <% @bloggenre.errors.full_messages.each do |err| %>
@@ -8,10 +8,10 @@
 </ul>
 <% end%>
 <table>
-<%=form_for(@bloggenre,url:{controller:'bloggenres',action:'add'})do |form| %>
-<tr><th>name</th>
+<%=form_for(@bloggenre,url:{controller:'bloggenres',action:'edit'})do |form| %>
+<tr><th>TItle</th>
 <td><%= form.text_field:name %></td></tr>
-<tr><th>memo</th>
+<tr><th>Subtitle</th>
 <td><%= form.text_field:memo %></td></tr>
 <tr><th></th>
 <td><%= form.submit "送信"%></td></tr>
