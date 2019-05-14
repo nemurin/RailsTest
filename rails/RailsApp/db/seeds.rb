@@ -10,3 +10,4 @@ Person.create(name:'Hanako',age:34,mail:'hanako@flower')
 Person.create(name:'sachiko',age:56,mail:'sachiko@happy')
 
 Blogconfig.create(id:1, title:'my blog',subtitle:'サンプルで作ったブログです',stylename:'gray')
+Blogpost.create(id:1, title:'ブログ始めました',read:'ブログシステムの作成',content:'中身です',bloggenre_id:'1')

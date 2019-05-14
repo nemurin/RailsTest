@@ -1,3 +1,4 @@
+
 class BlogpostsController < ApplicationController
   layout 'blogposts'
   def index
@@ -14,7 +15,7 @@ class BlogpostsController < ApplicationController
   end
 
   def edit
-    @blogpost = BLogpost.find params[:id]
+    @blogpost = Blogpost.find params[:id]
     @genres = Bloggenre.all
     if request.patch? then
       @blogpost.update blogposts_params
@@ -30,7 +31,7 @@ class BlogpostsController < ApplicationController
     end
   end
   private
-  def bloggenre_params
-    params.require(:bloggenre).permit(:name,:memo)
+  def blogposts_params
+    params.require(:blogpost).permit(:title,:read,:content,:bloggenre_id)
   end
 end
