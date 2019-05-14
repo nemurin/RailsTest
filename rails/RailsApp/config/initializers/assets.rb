@@ -29,6 +29,6 @@ Rails.application.config.assets.precompile += %w( bloggrnres.js )
 Rails.application.config.assets.precompile += %w( blogposts.css )
 Rails.application.config.assets.precompile += %w( blogposts.js )
 
-Rails.application.config.assets.precompile += %w( blog.css )
-Rails.application.config.assets.precompile += %w( blog.js )
+Rails.application.config.assets.precompile += %w( blogs.css )
+Rails.application.config.assets.precompile += %w( blogs.js )
 
