@@ -1,4 +1,4 @@
-<% @data.each |obj| %>
+<% @data.each do |obj| %>
 <h3 class="top_title"><a href="/blogs/show/<%=obj.id%>">
 <%=obj.title%></a></h3>
 <p class="top_read"><%=obj.read%><span class="top_created">
