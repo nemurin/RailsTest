@@ -16,7 +16,7 @@ class QuestionaryItemsController < ApplicationController
   def new
     @questionary_item = QuestionaryItem.new
     @questionary_item.questionary_id = params[:id]
-    @Questionary = Questionary.find params[:id]
+    @questionary = Questionary.find params[:id]
   end
 
   # GET /questionary_items/1/edit
