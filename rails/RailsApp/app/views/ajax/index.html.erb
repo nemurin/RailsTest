@@ -1,6 +1,19 @@
 <h1>Ajax#index</h1>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<p id="ajax">jQueryは動作していません</p>
-<script>
-    $('#ajax').text('jQueryは、動作しています！')
-</script>
+<table>
+    <tr>
+        <th>ID</th>
+        <td id="id"></td>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <td id="name"></td>
+    </tr>
+    <tr>
+        <th>Mail</th>
+        <td id="mail"></td>
+    </tr>
+</table>
+
+<br>
+<%= link_to 'link by Ajax',{action:'data'}, remote:true %>
