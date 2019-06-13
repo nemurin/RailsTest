@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'ajax/index'
   resources :questionary_results
   resources :questionary_choices
   resources :questionary_items
@@ -97,5 +96,7 @@ Rails.application.routes.draw do
   get 'questionary_choices/new/:id', to: 'questionary_choices#new'
   get 'questionary_items/new/:id', to: 'questionary_items#new'
   post 'questionaries/:id', to: 'questionaries#sendform'
+  get 'ajax/index'
   get 'ajax/data'
+  post 'ajax/data'
 end
